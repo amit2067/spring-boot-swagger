@@ -1,4 +1,4 @@
-# spring boot integration with swagger
+# Spring-Boot integration with Swagger
 
 test the swaager-ui on following URL
 
