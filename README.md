@@ -1,6 +1,8 @@
 # Spring-Boot integration with Swagger
 
-test the swaager-ui on following URL
+You should have jdk1.8 intstalled on your machine. This demo is built on Java 8.
+
+Test the swaager-ui on following URL
 
 http://localhost:8181/swagger-ui.html
 
