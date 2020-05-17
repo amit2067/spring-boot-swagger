@@ -69,7 +69,7 @@ public class SpringBootSwaggerAppTest {
 				.accept(MediaType.APPLICATION_JSON).content(mapper.writeValueAsString(employee))
 				.contentType(MediaType.APPLICATION_JSON);
 		MvcResult mockMvcResult = mockMvc.perform(requestBuilder).andReturn();
-		assertEquals(HttpStatus.OK.value(), mockMvcResult.getResponse().getStatus());
+		assertEquals(HttpStatus.CREATED.value(), mockMvcResult.getResponse().getStatus());
 	}
 	
 	@Test

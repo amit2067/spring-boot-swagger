@@ -3,6 +3,8 @@ package uk.springboot.swagger.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,8 +50,9 @@ public class EmployeeController {
 
 	@ApiOperation(value = "Add a new Employee")
 	@PostMapping("/addEmployee")
-	public void addEmployee(@RequestBody Employee employee) {
+	public ResponseEntity<String> addEmployee(@RequestBody Employee employee) {
 		employeeService.addEmployee(employee);
+		return new ResponseEntity<String>(HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "Update an exitsting employee")
